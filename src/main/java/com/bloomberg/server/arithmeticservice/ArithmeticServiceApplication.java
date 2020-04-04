@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ArithmeticServiceApplication {
 
 	public static void main(String[] args) {
+
+		//TODO change to netty
 		SpringApplication.run(ArithmeticServiceApplication.class, args);
 	}
 
