@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := build-docker
 
 build-docker:
+	./mvnw package
 	docker build -t service/arithmetic .
 
 run-docker:
