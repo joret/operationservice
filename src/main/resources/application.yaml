@@ -1,8 +1,12 @@
-server.port=8085
+server:
+    port : 8085
 
-#Can include new operations dynamically
-operations.1.allowed=+
-operations.2.allowed=-
-
-#How many numbers in the operation
-operations.maxnumbers=2
+operations:
+    #Can include new operations dynamically
+    allowed:
+        +,
+        -,
+        *,
+        /
+    #How many numbers in the operation
+    maxnumbers : 2
