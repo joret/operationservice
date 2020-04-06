@@ -2,7 +2,10 @@ package com.bloomberg.server.arithmeticservice.models;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Operation {
-    String operation;
+    Character operation;
+    List<Double> numbers;
 }
