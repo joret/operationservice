@@ -1,6 +1,6 @@
 package com.bloomberg.server.arithmeticservice.businesslogic.exceptions;
 
-public class ExpressionException extends Throwable {
-    public ExpressionException(String message) {
+public class ExpressionBuildException extends Throwable {
+    public ExpressionBuildException(String message) {
     }
 }
