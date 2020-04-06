@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ExpressionBuilder implements IExpressionBuilder {
+
+
     @Override
     public String build(Expression expression, OperationsConfig operationsConfig) {
         var quantityOfNumbers = expression.getNumbers().size();

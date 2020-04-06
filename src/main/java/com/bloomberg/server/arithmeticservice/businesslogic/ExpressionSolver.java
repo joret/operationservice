@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 @Service
-public class EvaluateExpression implements IExpressionSolver {
+public class ExpressionSolver implements IExpressionSolver {
 
     @Override
     public double evaluate(String expression) throws ExpressionSolverException {

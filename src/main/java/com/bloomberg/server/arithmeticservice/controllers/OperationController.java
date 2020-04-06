@@ -42,6 +42,7 @@ public class OperationController {
             logger.info("Access /operation");
         //TODO add fallback
         //TODO add timeout and hystrix
+        //TODO add log
                 //TODO fix tests
                 //TODO version API
                 //TODO validate expression before using, just to avoid misuse or abuse
