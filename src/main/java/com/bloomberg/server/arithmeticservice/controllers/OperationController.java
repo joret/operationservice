@@ -41,19 +41,19 @@ public class OperationController {
     public String arithmeticOperation(@RequestBody Expression expression) throws BadParametersException,
             ExpressionSolverException, ExpressionBuildException, ServerException {
 
-            logger.info("Access /operation");
 
-        //TODO add timeout and hystrix
-        //TODO add log
-                //TODO fix tests
-                //TODO version API
-                //TODO check test coverage
-                //TODO enable docker compose
-                //TODO add caffeine cache
+
+        //TODO add timeout and fallback call
+        //TODO add logger
         //TODO return a multivalue map or an object instead of return "{result: null}";
+                //TODO integration/acceptance tests
+
+        //TODO version API
+        //TODO enable docker compose
+        //TODO add caffeine cache
         //TODO add load test
-        // TODO version API
-        //TODO swagger
+
+
                 //Set fallback to website that calculates or to localhost
 
                 if(expression != null && operationsConfig != null){
@@ -63,7 +63,8 @@ public class OperationController {
                     var expressionStr = expressionBuilder.build(expression);
                     var result = expressionSolver.evaluate(expressionStr);
 
-
+                    logger.info("POST /operation\tNumbers:" + expression.getNumbers().toString()
+                            + "\tOperator:" + expression.getOperation() + "\tResult:" + result);
                     return "{\"result\":" + result  + "}";
                 }
                 return "{result: null}";
