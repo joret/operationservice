@@ -2,11 +2,8 @@ package com.bloomberg.server.arithmeticservice.businesslogic;
 
 import com.bloomberg.server.arithmeticservice.businesslogic.exceptions.ExpressionSolverException;
 import com.bloomberg.server.arithmeticservice.businesslogic.interfaces.IExpressionSolver;
-import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import org.springframework.stereotype.Service;
-
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
@@ -17,8 +14,8 @@ public class ExpressionSolver implements IExpressionSolver {
     public double evaluate(String expression) throws ExpressionSolverException {
 
         try{
-            ExecutorService exec = Executors.newFixedThreadPool(1);
-            Expression e = new ExpressionBuilder(expression).build();
+            var exec = Executors.newSingleThreadExecutor();
+            var e = new ExpressionBuilder(expression).build();
 
             Future<Double> future = e.evaluateAsync(exec);
 

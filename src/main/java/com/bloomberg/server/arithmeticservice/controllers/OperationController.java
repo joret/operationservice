@@ -3,6 +3,7 @@ package com.bloomberg.server.arithmeticservice.controllers;
 import com.bloomberg.server.arithmeticservice.businesslogic.exceptions.BadParametersException;
 import com.bloomberg.server.arithmeticservice.businesslogic.exceptions.ExpressionBuildException;
 import com.bloomberg.server.arithmeticservice.businesslogic.exceptions.ExpressionSolverException;
+import com.bloomberg.server.arithmeticservice.businesslogic.exceptions.ServerException;
 import com.bloomberg.server.arithmeticservice.businesslogic.interfaces.IExpressionBuilder;
 import com.bloomberg.server.arithmeticservice.businesslogic.interfaces.IExpressionSolver;
 import com.bloomberg.server.arithmeticservice.businesslogic.interfaces.IValidator;
@@ -38,7 +39,7 @@ public class OperationController {
     @ResponseBody
     @RequestMapping(value = "/operation", method = POST, consumes = "application/json")
     public String arithmeticOperation(@RequestBody Expression expression) throws BadParametersException,
-            ExpressionSolverException, ExpressionBuildException {
+            ExpressionSolverException, ExpressionBuildException, ServerException {
 
             logger.info("Access /operation");
 
@@ -46,8 +47,6 @@ public class OperationController {
         //TODO add log
                 //TODO fix tests
                 //TODO version API
-                //TODO validate expression before using, just to avoid misuse or abuse
-                //TODO Class operation seems not to be needed anymore, change with a simple string if thats the case
                 //TODO check test coverage
                 //TODO enable docker compose
                 //TODO add caffeine cache

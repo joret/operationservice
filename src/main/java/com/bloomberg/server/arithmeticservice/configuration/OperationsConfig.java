@@ -10,6 +10,6 @@ import java.util.Set;
 @ConfigurationProperties("operations")
 @Data
 public class OperationsConfig {
-    private Integer maxNumbers = 2;
+    private Integer getRequiredQuantityNumbers = 2;
     private Set<Character> allowed = Set.of('+');
 }

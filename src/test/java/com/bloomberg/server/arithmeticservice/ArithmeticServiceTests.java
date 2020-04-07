@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-
+/*
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         properties = {"httpbin=http://localhost:${wiremock.server.port}"})
@@ -24,7 +24,7 @@ public class ArithmeticServiceTests {
         @Autowired
         private WebTestClient webClient;
 
-        /*@Test
+        @Test
         void contextLoads() throws Exception {
             //Stubs
             stubFor(get(urlEqualTo("/operation"))
@@ -57,5 +57,5 @@ public class ArithmeticServiceTests {
                                     .isEqualTo("fallback requested!!!!"));
         }
 
-*/
-}
+
+}*/

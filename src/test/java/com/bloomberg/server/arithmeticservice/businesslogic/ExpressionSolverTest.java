@@ -12,32 +12,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ExpressionSolverTest {
-    @Test
-    void evaluate_When_ExpressionSumThreePlusTwo_Return_Five() throws ExpressionSolverException {
-        var sut = new ExpressionSolver();
+    private final IExpressionSolver expressionSolver = new ExpressionSolver();
 
-        var result = sut.evaluate("3+2");
+    @Test
+    void When_ExpressionSumThreePlusTwo_Return_Five() throws ExpressionSolverException {
+        var result = expressionSolver.evaluate("3+2");
         Assert.assertEquals(5, result, 0);
     }
 
     @Test
-    void evaluate_When_ExpressionAllSpaces_Throw_ExpressionSolverException() {
-        var sut =  new ExpressionSolver();
-
-        assertThrows(ExpressionSolverException.class, () ->sut.evaluate("  "));
+    void When_ExpressionAllSpaces_Throw_ExpressionSolverException() {
+        assertThrows(ExpressionSolverException.class, () ->expressionSolver.evaluate("  "));
     }
 
     @Test
-    void evaluate_When_ExpressionEmpty_Throw_ExpressionSolverException() {
-        var sut =  new ExpressionSolver();
-
-        assertThrows(ExpressionSolverException.class, () ->sut.evaluate(""));
+    void When_ExpressionEmpty_Throw_ExpressionSolverException() {
+        assertThrows(ExpressionSolverException.class, () ->expressionSolver.evaluate(""));
     }
 
     @Test
-    void evaluate_When_ExpressionNull_Return_Empty() {
-        var sut =  new ExpressionSolver();
-
-        assertThrows(ExpressionSolverException.class, () ->sut.evaluate(null));
+    void When_ExpressionNull_Return_Empty() {
+        assertThrows(ExpressionSolverException.class, () ->expressionSolver.evaluate(null));
     }
 }
