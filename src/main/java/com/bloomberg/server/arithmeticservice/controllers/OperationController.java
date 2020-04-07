@@ -41,21 +41,6 @@ public class OperationController {
     public String arithmeticOperation(@RequestBody Expression expression) throws BadParametersException,
             ExpressionSolverException, ExpressionBuildException, ServerException {
 
-
-
-        //TODO add timeout and fallback call
-        //TODO add logger
-        //TODO return a multivalue map or an object instead of return "{result: null}";
-                //TODO integration/acceptance tests
-
-        //TODO version API
-        //TODO enable docker compose
-        //TODO add caffeine cache
-        //TODO add load test
-
-
-                //Set fallback to website that calculates or to localhost
-
                 if(expression != null && operationsConfig != null){
 
                     validator.validate(expression, operationsConfig);

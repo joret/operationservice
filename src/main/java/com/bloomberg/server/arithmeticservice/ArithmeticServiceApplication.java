@@ -9,8 +9,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class ArithmeticServiceApplication {
 
 	public static void main(String[] args) {
-
-		//TODO change to netty
 		SpringApplication.run(ArithmeticServiceApplication.class, args);
 	}
 
